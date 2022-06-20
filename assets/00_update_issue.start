@@ -1,0 +1,12 @@
+#!/bin/sh
+cat << EOF > /etc/issue 
+
+Welcome to Alpine Linux 3.16
+kernel \r on an \m (\l)
+
+EOF
+cat "IP: " >> /etc/issue
+ip -4 -o addr show up  scope global | awk '{print $2,":",$4}'| sed -e "s/\/[1-9]*//" >> /etc/issue
+cat  << EOF >> /etc/issue
+
+EOF

@@ -1,0 +1,22 @@
+# Ignore output big files
+output*
+
+# Ignore image configs (contain passwords)
+image-configs/*
+
+# Except the image config template
+!image-configs/template.pkrvars.hcl
+
+# Ignore packer temporary files
+packer_cache
+
+# Ignore log files (could contain passwords)
+*.log
+
+.DS_Store
+
+# SSH keys generation
+secrets/*
+
+# Except the image config template
+!secrets/your-ssh-keys
